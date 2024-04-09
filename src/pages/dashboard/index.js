@@ -1,4 +1,6 @@
-import './styles.css'
+import React from 'react'
+import '../../global.css'
+import Head from '../componentes/head'
 import Logo from '../../assets/img/logo.jpg'
 import Menu from '../../componentes/menu'
 
@@ -9,7 +11,9 @@ export default function Dashboard(){
      
         <Menu />
         </div>
-        <div className='principal'>
+        <div className="maian">
+            <Head />
+            
         <h1>Página Principal</h1>
         </div>
     </div>
