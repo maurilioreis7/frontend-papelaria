@@ -76,6 +76,7 @@ body{
     p{
         margin-top: 10px;
     }
+
     .menu{
         width: 20%;
         background-color: #ffff;
@@ -92,6 +93,81 @@ body{
         padding: 15px;
     }
     .dashboard-container{
-        display: flex;
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
     }
+    .link{
+        display: flex;
+        width: 85%;
+        border-radius: 5px;
+        border: #a29d7f 1px solid;
+        align-items: center;
+        border-radius: 5px;
+        color:#9c8680;
+        padding: 10px;
+        margin: auto;
+        margin-top:8px;
+        
+        
+    }
+    nav{
+        height: 90vh;
+    }
+
+    .link:hover{
+        background-color:#a29d7f ;
+        color: white;
+       }
+       .icon-menu{
+           padding-right: 20px;
+       }
+       .btn-salvar{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 12px;
+        background-color: green;
+        border:0;
+        border-radius: 5px;
+        color:#FFF;
+        font-weight: 700;
+        text-align: center;
+        text-decoration:none;
+        font-size: 14px;
+        transition: filter 0.2s;
+    }
+    .btn-salvar:hover{
+        filter:brightness(90%);
+        cursor:pointer
+    }
+       .btn-novo{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 100%;
+        width: 100%;
+        padding: 12px;
+        background-color: green;
+        border:0;
+        border-radius: 5px;
+        color:#FFF;
+        font-weight: 700;
+        text-align: center;
+        text-decoration:none;
+        font-size: 14px;
+        transition: filter 0.2s;
+        
+    }
+    .btn-novo:hover{
+        filter:brightness(90%);
+        cursor:pointer
+    }
+    table{
+        font:400 16px 'Roboto', sans-serif; 
+        margin: 0 auto;
+   
+    }
+    th, td {
+        border-bottom: 1px solid #96D4D4;
+        text-align: left;
+        padding: 5px;
+      }
