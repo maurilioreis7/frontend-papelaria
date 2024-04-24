@@ -45,10 +45,10 @@ body{
         width: 250px;
         
     }
-    .logo{
-    display: flex;
-    justify-content: center;
-    
+    .logoicon{
+        width: 60px !important;
+        border-radius: 50%;
+        border: solid 0.5px rgba(255, 166, 0, 0.833);
     }
     .button_login{
         margin-top: 10px;
@@ -94,7 +94,17 @@ body{
     }
     .dashboard-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+    .barrasuperior{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding:10px;
     }
     .link{
         display: flex;

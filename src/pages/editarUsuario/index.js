@@ -4,7 +4,6 @@ import Head from "../componentes/head"
 import {useNavigate,useParams, Link} from "react-router-dom"
 
 
-
 import '../../global.css'
 
 export default function Editarusuario(){
@@ -13,7 +12,7 @@ export default function Editarusuario(){
     const [nome,setNome] = useState("")
     const [email,setEmail] = useState("")
     const [senha,setSenha] = useState()
-    const [usuarios,setUsuarios] = useState()
+    const [usuarios,setUsuarios] = useState([])
 
 
     const usuario={
@@ -24,38 +23,47 @@ export default function Editarusuario(){
     };
 
     useEffect(()=>{
+       
         exibirdados()
     },[])
 
 
     const exibirdados=()=>{
+    
         const banco = JSON.parse(localStorage.getItem("usuarios")|| "[]")
         banco.filter(linha=>{
-         return  linha.id===id
+           return linha.id===id
         }
         ).map(value=>{
-            setNome(value.nome)
-            setEmail(value.email)
-            setSenha(value.senha)
-            }
-        )
-       
-    }
+            
+                setNome(value.nome)
+                setEmail(value.email)
+                setSenha(value.senha)
+          
 
+            
+        }
+       
+        )
+     
+        
+      
+    
+    }
     const salvardados=(e)=>{
       e.preventDefault();
      const banco = JSON.parse(localStorage.getItem("usuarios")|| "[]")
      const dadosvelhos = banco.filter(linha=>
         {
-        return    linha.id!=id
+            return linha.id!=id
         }
         )
      dadosvelhos.push(usuario)
      console.log(dadosvelhos)
      localStorage.setItem("usuarios",
-     JSON.stringify(dadosvelhos))
-    alert("Dados Salvos com Sucesso!!!!")
-    navigate("/listausuario")
+      JSON.stringify(dadosvelhos))
+    alert("Dados Salvos com Sucesso!!!!!")
+     navigate("/listausuario")
     }
     return(
         <div className="dashboard-container">
