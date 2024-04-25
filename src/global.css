@@ -46,9 +46,10 @@ body{
         
     }
     .logoicon{
-        width: 60px !important;
-        border-radius: 50%;
-        border: solid 0.5px rgba(255, 166, 0, 0.833);
+      width: 60px !important;
+      border-radius: 50%;
+      border: solid 0.5px rgba(255, 166, 0, 0.516);
+    
     }
     .button_login{
         margin-top: 10px;
@@ -102,7 +103,7 @@ body{
     }
     .barrasuperior{
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         padding:10px;
     }

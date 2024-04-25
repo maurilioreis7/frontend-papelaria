@@ -6,7 +6,6 @@ import Head from "../componentes/head";
 import Menu from "../componentes/menu";
 import { Link, useNavigate } from "react-router-dom";
 import { FiEdit,FiTrash } from "react-icons/fi";
-
 import Barrasuperior from "../componentes/barrasuperior";
 
 export default function Listausuarios(){
@@ -55,6 +54,8 @@ useEffect(()=>{
 },[])
     return(
 <div className="dashboard-container">
+<Barrasuperior />
+<div className="header">
         <div className="menu">
             <Menu />
         </div>
@@ -72,7 +73,7 @@ useEffect(()=>{
              <th></th>
              <th></th>
             </tr>
-            
+            re
                 {
                   usuarios.map((linha)=>{
                      return(
@@ -100,6 +101,8 @@ useEffect(()=>{
 
 
         </div>
+        </div>
+        
 </div>
     )
 }

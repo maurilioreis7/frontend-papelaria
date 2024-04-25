@@ -2,7 +2,7 @@ import { useState } from "react"
 import Menu from "../componentes/menu"
 import Head from "../componentes/head"
 import {useNavigate, Link} from "react-router-dom"
-
+import Barrasuperior from "../componentes/barrasuperior";
 
 import '../../global.css'
 
@@ -30,6 +30,8 @@ export default function Cadastrousuario(){
     }
     return(
         <div className="dashboard-container">
+            <Barrasuperior />
+        <div className="header">
                 <div className="menu">
                     <Menu />
                 </div>
@@ -47,13 +49,13 @@ export default function Cadastrousuario(){
                        />
                        <input 
                        type="email" 
-                       placeholder="email"
+                       placeholder="E-mail"
                        value={email}
                        onChange={(e)=>setEmail(e.target.value)}                      
                        />
                        <input 
                        type="password" 
-                       placeholder="senha"
+                       placeholder="Senha"
                        value={senha}
                        onChange={(e)=>setSenha(e.target.value)}                     
                        />
@@ -63,6 +65,8 @@ export default function Cadastrousuario(){
                       
                     </form>
                 </div>
+
+           </div>
         </div>
             )
 }

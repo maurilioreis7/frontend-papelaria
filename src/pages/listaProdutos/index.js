@@ -6,12 +6,12 @@ import Head from "../componentes/head";
 import Menu from "../componentes/menu";
 import { Link, useNavigate } from "react-router-dom";
 import { FiEdit,FiTrash } from "react-icons/fi";
-
 import Barrasuperior from "../componentes/barrasuperior";
+
 
 export default function Listaprodutos(){
 const navigate = useNavigate();
-const [usuarios,setProdutos] = useState([]);
+const [produtos,setProdutos] = useState([]);
 const [quantidade,setQuantidade] = useState(0);
 
 function mostrarprodutos(){
@@ -39,7 +39,7 @@ function editarproduto(id){
                   }
                   )
                   localStorage.setItem("produtos",JSON.stringify(dadosvelhos))
-                  mostrarusuarios();
+                  mostrarprodutos();
               }
             },
             {
@@ -55,12 +55,13 @@ useEffect(()=>{
 },[])
     return(
 <div className="dashboard-container">
-
+<Barrasuperior />
+<div className="header">
         <div className="menu">
             <Menu />
         </div>
         <div className="main">
-            <Head title="Lista de produtos" />
+            <Head title="Lista de Produtos" />
             <div>
 
                 <Link to="/cadastroproduto" className='btn-novo'>Novo</Link>
@@ -71,7 +72,7 @@ useEffect(()=>{
              <th>Descrição</th>
              <th>valor Unitário</th>
              <th>Quantidade Mínima</th>
-             <th>Quantidade máxima</th>
+             <th>Quantidade Máxima</th>
              <th></th>
              <th></th>
             </tr>
@@ -105,6 +106,8 @@ useEffect(()=>{
 
 
         </div>
+        </div>
+        
 </div>
     )
 }
