@@ -8,7 +8,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiEdit,FiTrash } from "react-icons/fi";
 import Barrasuperior from "../componentes/barrasuperior";
 
-
 export default function Listaprodutos(){
 const navigate = useNavigate();
 const [produtos,setProdutos] = useState([]);

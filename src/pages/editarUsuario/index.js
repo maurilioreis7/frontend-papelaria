@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Menu from "../componentes/menu"
 import Head from "../componentes/head"
 import {useNavigate,useParams, Link} from "react-router-dom"
-
+import Barrasuperior from "../componentes/barrasuperior"
 
 import '../../global.css'
 
@@ -67,38 +67,40 @@ export default function Editarusuario(){
     }
     return(
         <div className="dashboard-container">
-                <div className="menu">
-                    <Menu />
-                </div>
-                <div className="main">
-                    <Head title="Editar Usuário" />
-    
-                    <form onSubmit={salvardados} > 
-                        
-                       <input 
-                       type="text" 
-                       placeholder="Nome"
-                       value={nome}
-                       onChange={(e)=>setNome(e.target.value)}
-                       
-                       />
-                       <input 
-                       type="email" 
-                       placeholder="email"
-                       value={email}
-                       onChange={(e)=>setEmail(e.target.value)}                      
-                       />
-                       <input 
-                       type="password" 
-                       placeholder="senha"
-                       value={senha}
-                       onChange={(e)=>setSenha(e.target.value)}                     
-                       />
-                       <button className="btn-salvar">
-                        Salvar
-                       </button>
-                      
-                    </form>
+            <Barrasuperior/>
+                <div className="header">
+                    <div className="menu">
+                        <Menu />
+                    </div>
+                    <div className="main">
+                        <Head title="Editar Usuário" />
+                        <form onSubmit={salvardados} >
+                    
+                           <input
+                           type="text"
+                           placeholder="Nome"
+                           value={nome}
+                           onChange={(e)=>setNome(e.target.value)}
+                    
+                           />
+                           <input
+                           type="email"
+                           placeholder="email"
+                           value={email}
+                           onChange={(e)=>setEmail(e.target.value)}
+                           />
+                           <input
+                           type="password"
+                           placeholder="senha"
+                           value={senha}
+                           onChange={(e)=>setSenha(e.target.value)}
+                           />
+                           <button className="btn-salvar">
+                            Salvar
+                           </button>
+                    
+                        </form>
+                    </div>
                 </div>
         </div>
             )

@@ -4,17 +4,15 @@ import Head from "../componentes/head"
 import {useNavigate, Link} from "react-router-dom"
 import Barrasuperior from "../componentes/barrasuperior"
 
-
 import '../../global.css'
 
 export default function Cadastroproduto(){
     const navigate = useNavigate();
     const [status,setStatus] = useState("")
     const [descricao,setDescricao] = useState("")
-    const [quantidade_minima,setQuantidade_minima] = useState(5)
-    const [quantidade_maxima,setQuantidade_maxima] = useState(20)
+    const [quantidade_minima,setQuantidade_minima] = useState("")
+    const [quantidade_maxima,setQuantidade_maxima] = useState("")
    
-
 
     const produto={
         id:Date.now().toString(36)+Math.floor(Math.pow(10,12)+Math.random()*9*Math.pow(10,12)).toString(36),
@@ -24,9 +22,8 @@ export default function Cadastroproduto(){
         quantidade_maxima,
        
     };
-    
     const salvardados=(e)=>{
-      e.preventDefault();
+     e.preventDefault();
      const banco = JSON.parse(localStorage.getItem("produtos")|| "[]")
      banco.push(produto)
      localStorage.setItem("produtos",
@@ -62,14 +59,14 @@ export default function Cadastroproduto(){
                     
                        
                        <input 
-                       type="password" 
+                       type="text" 
                        placeholder="Quantidade Minima"
                        value={quantidade_minima}
                        onChange={(e)=>setQuantidade_minima(e.target.value)}                   
                        />
 
                         <input 
-                       type="password" 
+                       type="text" 
                        placeholder="Quantidade Maxima"
                        value={quantidade_maxima}
                        onChange={(e)=>setQuantidade_maxima(e.target.value)}                     
