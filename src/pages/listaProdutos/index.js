@@ -68,7 +68,8 @@ useEffect(()=>{
            <table>
             <tr>
              <th>ID</th>
-             <th>Descrição</th>
+             <th>Status</th>
+             <th>Descrição</th>  
              <th>valor Unitário</th>
              <th>Quantidade Mínima</th>
              <th>Quantidade Máxima</th>
@@ -81,6 +82,7 @@ useEffect(()=>{
                      return(
                         <tr key={linha.toString()}>
                         <td>{linha.id}</td>
+                        <td>{linha.status}</td>
                         <td>{linha.descricao}</td>
                         <td>{linha.valor_unitario}</td>
                         <td>{linha.quantidade_minima}</td>
